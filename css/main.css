@@ -1,0 +1,24 @@
+html.dimbg .slide-background {
+  opacity: 0.05 !important; }
+
+html.dimbg2 .slide-background {
+  opacity: 0.1 !important; }
+
+.text-small {
+  font-size: small; }
+
+.text-italic {
+  font-style: italic; }
+
+.multiCol {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  text-align: left; }
+  .multiCol .col {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+    padding: 2% 0 2% 3%; }
+    .multiCol .col:first-of-type {
+      padding-left: 0; }

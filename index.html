@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Collaborative Dev Process</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/moon.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section data-background-image="images/kanban.jpg" data-background-size="contain" data-state="dimbg2">
+
+				<!-- <img data-src="images/logo_hor_fullres.png" alt="WIM logo"
+					style="margin:30px;background:none;border:none;box-shadow:none;"> -->
+				<br>
+				<h3>A model for Collaborative Development</h3>
+				<p>WIM's Development Process with Github</p>
+
+				<p>
+					<small>Streamstats Workshop 2020<br>Presented by <a
+							href="https://www.linkedin.com/in/blakedraper/">Blake Draper</a>, Software
+						Developer<br><a href="https://github.com/usgs-wim">USGS Web Informatics and Mapping
+							(WIM)</a><br></small>
+					<br>
+					<!-- <img height="70" data-src="images/wim_hor_abbr_light.png" alt="WiM logo"
+						style="margin:30px;background:none;border:none;box-shadow:none;"> -->
+					<img data-src="images/logo_hor_fullres.png" alt="WIM logo"
+						style="margin:30px;background:none;border:none;box-shadow:none;">
+				</p>
+
+			</section>
+
+
+			<section>
+				<h3>Overview</h3>
+
+				<div class='multiCol'>
+					<div class='col'>
+						<ul>
+							<!-- <li class="fragment">Set Up</li> -->
+							<h4>Set Up</h4>
+							<ul class="fragment">
+								<li>Core Branches</li>
+								<li>Understanding local vs remote</li>
+							</ul>
+						</ul>
+					</div>
+					<div class='col'>
+						<ul>
+							<!-- <li class="fragment"> Doing the work</li> -->
+							<h4>Doing the work</h4>
+							<ul class="fragment">
+								<li>Issue Branches</li>
+								<li>Issue Tracking</li>
+								<li>Kanban Board</li>
+							</ul>
+						</ul>
+					</div>
+					<div class='col'>
+						<ul>
+							<!-- <li class="fragment">Putting it all together</li> -->
+							<h4>Putting it all together</h4>
+							<ul class="fragment">
+								<li>Pull Requests</li>
+								<li>Semver Releases</li>
+								<li>The core branches pipeline</li>
+							</ul>
+						</ul>
+					</div>
+				</div>
+
+
+			</section>
+
+
+			<section>
+				<h2>Setup: Core Branches</h2>
+
+				<p>Branches help organize your development and keep it moving smoothly.</p>
+
+				<h3>Categories of branches</h3>
+				<ul>
+					<li>Core branches (protect these)</li>
+					<li>Issue branches (more on these later)</li>
+					<li>Feature branches <span class="fragment"> ← can be long term</span></li>
+					<li class="text-italic">generic dev branches <span class="fragment"> ← only for early dev</span>
+					</li>
+					<ul class="fragment">
+						<li>'blakedev', 'laurendev'</li>
+					</ul>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Setup: Establishing your Core branches</h2>
+				<p>Core branch names can vary. Suggested setup:</p>
+				<div class='multiCol'>
+					<div class='col fragment'>
+						<ul>
+							<li>
+								<h4>master</h4> the branch that deploys to production
+							</li>
+							<ul>
+								<li>always promoted up from test branch</li>
+								<li>never direct commit - always after testing and approval</li>
+							</ul>
+						</ul>
+					</div>
+					<div class='col fragment'>
+						<ul>
+							<li>
+								<h4>test</h4> the branch that deploys to the test site
+							</li>
+							<ul>
+								<li>always prmoted up from dev or staging</li>
+							</ul>
+						</ul>
+
+					</div>
+					<div class='col fragment'>
+						<ul>
+							<li>
+								<h4>dev (or staging)</h4> the branch where all the work comes together
+							</li>
+							<ul>
+								<li>never direct commit - always via a Pull Request</li>
+							</ul>
+						</ul>
+
+					</div>
+				</div>
+
+			</section>
+
+
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
