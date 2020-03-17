@@ -1,6 +1,6 @@
 {
   "name": "devProcessPresentation",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Reveal.js-based presentation on WIM's recommended collaborative development process",
   "homepage": "https://wim.usgs.gov",
   "subdomain": "revealjs",

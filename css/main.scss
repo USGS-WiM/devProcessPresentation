@@ -37,3 +37,44 @@ html.dimbg2 .slide-background {
     font-size: 30px;
     line-height: 30px;
 }
+
+.font-30 {
+    font-size: 30px;
+    line-height: 25px;
+    padding-bottom: 0.5em;
+}
+
+.font-25 {
+    font-size: 25px;
+    line-height: 25px;
+    padding-bottom: 0.5em;
+}
+
+.font-20 {
+    font-size: 20px;
+    line-height: 20px;
+
+}
+
+.wide-right {
+    width: 500px;
+}
+
+.multiCol .col-wide-right {
+    display: table-cell;
+    vertical-align: top;
+    width: 65%;
+    padding: 2% 0 2% 3%;
+}
+
+.multiCol .col-narrow-left {
+    display: table-cell;
+    vertical-align: top;
+    width: 35%;
+    padding: 2% 0 2% 3%;
+}
+
+#version {
+    font-size: 12px;
+    float: right;
+}

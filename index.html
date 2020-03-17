@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/moon.css">
+	<!-- <link rel="stylesheet" href="css/theme/league.css"> -->
 	<link rel="stylesheet" href="css/main.css">
 
 	<!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"> -->
@@ -43,11 +44,11 @@
 				<!-- <img data-src="images/logo_hor_fullres.png" alt="WIM logo"
 					style="margin:30px;background:none;border:none;box-shadow:none;"> -->
 				<br>
-				<h3>A model for Collaborative Development</h3>
-				<p>WIM's Development Process with Github</p>
+				<h2>A model for Collaborative Development</h2>
+				<p>WIM's Development Process</p>
 
 				<p>
-					<small>Streamstats Workshop 2020<br>Presented by <a
+					<small>Prepared for the Streamstats Workshop 2020<br>Presented by <a
 							href="https://www.linkedin.com/in/blakedraper/">Blake Draper</a>, Software
 						Developer<br><a href="https://github.com/usgs-wim">USGS Web Informatics and Mapping
 							(WIM)</a><br></small>
@@ -55,7 +56,9 @@
 					<!-- <img height="70" data-src="images/wim_hor_abbr_light.png" alt="WiM logo"
 						style="margin:30px;background:none;border:none;box-shadow:none;"> -->
 					<img data-src="images/logo_hor_fullres.png" alt="WIM logo"
-						style="margin:30px;background:none;border:none;box-shadow:none;">
+						style="margin:30px;background:none;border:none;box-shadow:none;" width="80%">
+
+					<div id="version">v0.1.0</div>
 				</p>
 
 			</section>
@@ -92,7 +95,7 @@
 							<h4><i class="fa fa-file-code"></i> Releasing</h4>
 							<ul class="fragment">
 								<li>Pull Requests</li>
-								<li>Semver Releases</li>
+								<li>SemVer Releases</li>
 								<li>The core branches pipeline</li>
 							</ul>
 						</ul>
@@ -192,8 +195,8 @@
 				</h3>
 				<span>Commands such as </span>
 				<pre><code class="hljs console">git pull origin dev</code> or  <code  class="hljs console">git push origin test</code></pre>
-				<span>involve the remote repository </span><br>
-				<span>the remote repository is often called 'origin'</span>
+				<span class="font-30">involve the remote repository </span><br>
+				<span class="font-30">the remote repository is often called 'origin'</span>
 			</section>
 
 			<section>
@@ -224,6 +227,7 @@
 
 			<section>
 				<h3><i class="fa fa-clipboard"></i> Issues (continued)</h3>
+				<div class="font-30">Issue Examples</div>
 				<div class='multiCol'>
 					<div class='col'>
 						<img data-src="images/issueExample1.JPG" alt="issues">
@@ -238,19 +242,23 @@
 				<h3> <i class="fa fa-clipboard"></i> Issues (continued)</h3>
 				<div class='multiCol'>
 					<div class='col'>
-						<span class="font-30">Assignment</span><br>
+						<span class="font-25">Assignment</span><br>
 						<img data-src="images/issueAssignment.JPG" alt="labels" height="350px">
 						<br>
 						<span class="font-25">Project Manager does initial assignment, or devs self-assign</span>
 					</div>
 
 					<div class='col'>
-						<span class="font-30">Labels</span><br>
+						<span class="font-25">Labels</span><br>
 						<img data-src="images/issueLabels.JPG" alt="labels" height="350px">
 						<br>
 						<span class="font-25">Use labels to organize, categorize and filter your issues.</span>
 					</div>
 				</div>
+
+				<aside class="notes">
+					Make sure devs re-assign as they takeover an issue. These are useful tools so use them!
+				</aside>
 			</section>
 
 			<section>
@@ -343,6 +351,16 @@
 			</section>
 
 			<section>
+				<h3> <i class="fa fa-laptop-code"></i> Working in Issue Branches (continued)</h3>
+				<h4>Merging Your Work into Dev</h4>
+				<p class="font-30">A short but decriptive commit message is best</p>
+				<img data-src="images/gitCommit.JPG" alt="git commit">
+				<p class="font-30">Then push the issue branch up to origin</p>
+				<pre class="font-30"><code class="hljs console">git push origin 913</code></pre>
+
+			</section>
+
+			<section>
 				<h3> <i class="fa fa-code-merge"></i> Pull Requests</h3>
 				<div class='multiCol'>
 					<div class='col-narrow-left'>
@@ -363,6 +381,9 @@
 			<section>
 				<h3><i class="fa fa-code-merge"></i> Pull Requests (continued)</h3>
 				<div class='multiCol'>
+					<div class='col-wide-right'>
+						<img data-src="images/PRcomparo.JPG" alt="Pull Request comparison view">
+					</div>
 					<div class='col-narrow-left'>
 						<div class="font-30">Request Reviewers for your Pull Request</div>
 						<ul>
@@ -375,13 +396,16 @@
 								</ul>
 							</li>
 						</ul>
-
 						<img data-src="images/PRinline.JPG" alt="Pull Request inline comment" width="100%">
 
+						<!-- <figure>
+							<img data-src="images/PRinline.JPG" alt="Pull Request inline comment" width="100%">
+							<figcaption class="font-20">Inline comment</figcaption>
+						</figure> -->
+
+
 					</div>
-					<div class='col-wide-right'>
-						<img data-src="images/PRcomparo.JPG" alt="Pull Request comparison view">
-					</div>
+
 				</div>
 				<div class='multiCol'>
 					<ul>
@@ -395,11 +419,6 @@
 
 			<section>
 				<h3> <i class="fa fa-code-merge"></i> Pull Requests (continued)</h3>
-				<!-- <ul>
-					<li class="font-25">Comment as needed</li>
-					<li class="font-25">Approve and merge</li>
-					<li class="font-25">After the PR is merged, delete the issue branch</li>
-				</ul> -->
 
 				<div class='multiCol'>
 					<div class="col fragment">
@@ -531,7 +550,7 @@
 				</p>
 
 				<p><i class="fa fa-code-commit"></i> Once version is promoted to master and published to production,
-					that verison is public. Development
+					that version is public. Development
 					cycles continue until project is complete! <i class="fas fa-glass-cheers"></i></p><br>
 
 
@@ -554,6 +573,7 @@
 		</div>
 
 		<script src="js/reveal.js"></script>
+		<script src="js/custom.js"></script>
 
 		<script>
 			// More info about config & dependencies:
