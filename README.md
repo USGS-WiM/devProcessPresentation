@@ -8,11 +8,15 @@ This is a [Reveal.js](<[https://revealjs.com/#/](https://revealjs.com/#/)>) pres
 
 The branches of this repository differentiate slide decks targeted for a distinct audience and purpose.
 
+#### main
+
+Default branch. Currently derived from the `fullOverview` branch but will be developed into more of a base, with slides that can be copied into other branches for other purposes.
+
 #### fullOverview
 
 This branch contains the presentation composed for the StreamStats Workshop in 2020. It is a full overview of the process including branch protocol, issue management, pull/merge requests, and release protocol. It was written for a broad audience of developers and experience level and gets into basic Git concepts such as local vs remote. **As of April 2022, it contains deprecated advice on branch and deployment protocol.** This is a useful branch for presenting a thorough, top level overview to a broad audience.
 
-#### wimDevConsitution
+#### wimDevConstitution
 
 This branch contains the presentation composed for the WIM Summit in 2022 to overview the collaborative dev rocess in WIM and outline a foundational collaborative dev consitution for the team.
 
